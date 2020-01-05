@@ -40,8 +40,8 @@
 
             fixed4 frag (v2f i) : SV_Target {
                 float2 pixelScaling = _PixelDensity * _AspectRatioMultiplier;
-                i.uv = round(i.uv * pixelScaling) / pixelScaling;
-                return tex2D(_MainTex, i.uv);
+				i.uv = round(i.uv * pixelScaling) / pixelScaling;
+				return tex2D(_MainTex, i.uv);
             }
             ENDCG
         }

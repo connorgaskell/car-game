@@ -16,12 +16,12 @@ public class CameraControl : MonoBehaviour {
     public float yPosition = 5.0f;
     
     void LateUpdate () {        
-        Vector3 position = transform.position;
-        position.x = Mathf.Lerp(transform.position.x, target.position.x + xOffset, speed * Time.deltaTime);
-        position.y = yPosition;
-        position.z = Mathf.Lerp(transform.position.z, target.position.z - zOffset, speed * Time.deltaTime);
-        
-        transform.position = position;
-        transform.LookAt(target);
+        transform.position = new Vector3(
+            Mathf.Lerp(transform.position.x, target.position.x + xOffset, speed * Time.deltaTime),
+            Mathf.Lerp(transform.position.y, yPosition, speed * Time.deltaTime),
+            Mathf.Lerp(transform.position.z, target.position.z - zOffset, speed * Time.deltaTime)
+        );
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(target.position - transform.position), Time.time * 2.0f);
     }
 }
