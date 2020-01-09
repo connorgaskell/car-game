@@ -342,9 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3df658fea91c14da10b04c2350e3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 784239560}
-  speed: 5
-  maxAcceleration: 20
+  maxAcceleration: 80
   turnSensitivity: 1
   maxSteerAngle: 45
   centerOfMass: {x: 0, y: -0.3, z: 0}
@@ -861,12 +859,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3cabd4b48b10844aaf7f6b97260292, type: 3}
---- !u!4 &784239560 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2154119429114014529, guid: 1db840cb15ed61947a8d0e1b096b8211,
-    type: 3}
-  m_PrefabInstance: {fileID: 2154119428821033097}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887402884
 GameObject:
   m_ObjectHideFlags: 0
